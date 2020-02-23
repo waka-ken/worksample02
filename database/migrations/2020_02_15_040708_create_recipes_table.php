@@ -24,8 +24,7 @@ class CreateRecipesTable extends Migration
             $table->string('title');
             $table->string('materials');
             $table->string('method');
-            $table->string('image_path')->nullable();
-            $table->timestamps('modified');
+            $table->timestamps();
         });
     }
 

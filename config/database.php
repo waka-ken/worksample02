@@ -54,6 +54,7 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
+            'identifier' => ''/* for PostgreSQL */,
         ],
 
         'pgsql' => [
@@ -68,6 +69,7 @@ return [
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
+            'identifier' => ''/* for PostgreSQL */,
         ],
 
         'sqlsrv' => [

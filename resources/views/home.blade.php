@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+                    <br>
+                    <a href="/recipes">メインページに移動する</a>
                 </div>
             </div>
         </div>

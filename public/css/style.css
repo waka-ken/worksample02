@@ -8,3 +8,17 @@ ul{
 main{
   height: 800px;
 }
+.background-img{
+    background-image: url('../image/pizza-3007395_1920.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.bg-blacky{
+    background-color: rgba(0,0,0,0.5);
+    height:100vh;
+}
+.app-logo{
+    font-family: 小塚ゴシック Pr6N R;
+    font-size: 115px;
+}

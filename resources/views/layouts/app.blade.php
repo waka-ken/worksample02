@@ -26,7 +26,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <h1 class="app-logo">Cooky</h1>
@@ -37,14 +37,14 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav ml-4">
-                        <li class="mx-4">
-                            <a href="{{ url('/') }}" class="text-dark">Top</a>
+                    <ul class="navbar-nav mr-4">
+                        <li class="mr-4">
+                            <a href="{{ url('/') }}" class="text-dark">・Top</a>
                         </li>
-                        <li class="mx-4"><a href="{{ url('/recipes') }}" class="text-dark">Recipes</a></li>
+                        <li class="mr-4"><a href="{{ url('/recipes') }}" class="text-dark">・Recipes</a></li>
                     </ul>
                     <a href="recipes/create">
-                        <button class="btn btn-success mx-4">
+                        <button class="btn btn-success mr-4">
                             new!
                         </button>
                     </a>
@@ -84,9 +84,28 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 h-auto">
             @yield('content')
         </main>
+
+        <footer class="py-4 bg-dark text-light">
+            <div class="container text-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/') }}">Top</a>
+                    <li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('recipes') }}">Recipes</a>
+                    <li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('recipes/create') }}">New!</a>
+                    <li>
+                </ul>
+                <p><small>Copyright &copy:2020 Cooky,All Rights Reserved.</small></p>
+            </div>
+
+        </footer>
+
     </div>
 </body>
 </html>

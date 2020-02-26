@@ -14,7 +14,7 @@
     <div class="container-fluid bg-blacky text-light content-center">
         <div class="row justify-content-center h-100 align-items-center">
             <div class="row justify-content-center">
-                <h1 class="app-logo col-12 text-center">Cooky</h1>
+                <h1 class="app-logo col-12 text-center" style="font-size:115px;">Cooky</h1>
 
                 <!-- <div class="row justify-content-center my-4">
                     <h1 class="col-12 text-center">料理レシピ投稿＆レビューサイト</h1>

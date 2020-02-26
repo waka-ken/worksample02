@@ -15,7 +15,7 @@ class RecipesController extends Controller
     public function index()
     {
         //
-        $recipes = Recipes::latest()->paginate(10);
+        $recipes = Recipes::latest()->paginate(9);
 
         return view('recipes.index', ['recipes' => $recipes]);
     }

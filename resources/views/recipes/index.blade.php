@@ -1,5 +1,6 @@
 @php
     $title = __('Recipes');
+
 @endphp
 @extends('layouts.app')
 @section('content')
@@ -10,32 +11,26 @@
             新規作成
         </a>
     </button>
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <!-- <th>{{ __('Author') }}</th> -->
-                    <th>{{ __('Title') }}</th>
-                    <!-- <th>{{ __('Body') }}</th> -->
-                    <th>{{ __('Created') }}</th>
-                    <th>{{ __('Updated') }}</th>
-                </tr>
-            </thead>
-            <tbody>
+    <div class="container p-0">
+        <div class="row justify-content-center">
             @foreach ($recipes as $recipe)
-                <tr>
+            <div class="col-md-4 col-sm-6 py-3">
+                <div class="card" style="max-width:25rem;">
+                    <img src="./image/pancake-1984716_1920.jpg" class="card-img-top p-3">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ $recipe->title }}</h2>
 
-                    <td>
-                        <a href="{{ url('recipes/'.$recipe->id) }}">{{ $recipe->title }}</a>
-                    </td>
-
-                    <td>{{ $recipe->created_at }}</td>
-                    <td>{{ $recipe->updated_at }}</td>
-                 </tr>
+                        <hr>
+                        <a href=" recipes/{{ $recipe->id }}" class="btn btn-primary">詳しくみる</a>
+                        <p class="card-text text-secondary text-right pt-4">作成日:{{ $recipe->created_at }}</p>
+                    </div>
+                </div>
+            </div>
             @endforeach
-            </tbody>
-        </table>
+
+        </div>
     </div>
-{{ $recipes->links() }}
+
+    {{ $recipes->links() }}
 </div>
 @endsection

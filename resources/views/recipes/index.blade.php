@@ -23,6 +23,11 @@
                         <hr>
                         <a href=" recipes/{{ $recipe->id }}" class="btn btn-primary">詳しくみる</a>
                         <p class="card-text text-secondary text-right pt-4">作成日:{{ $recipe->created_at }}</p>
+                        @if ($recipe->comments->count())
+                        <span class="badge badge-primary">
+                            コメント {{ $recipe->comments->count() }}件
+                        </span>
+                    @endif
                     </div>
                 </div>
             </div>
